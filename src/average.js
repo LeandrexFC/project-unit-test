@@ -11,16 +11,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (num1, num2, num3) => num1 + num2 / num3 {
-  for (let i = 0; i < average.length; i += 1) {
-    if (isNaN(par)) {
-      return "NaN";
+const average = (num) => {
+  let med = 0;
+  for (let i = 0; i < num.length; i += 1) {
+    if (typeof num[i] !== 'number') {
+      return undefined;
     }
+    med += num[i];
   }
-
-  return (average[0] + average[1]) / average[2];
+  if (num.length === 0) {
+    return undefined;
+  }
+  let result = med / 3;
+  return Math.round(result);
 };
-
-console.log(average(1, 2, 3));
 
 module.exports = average;
