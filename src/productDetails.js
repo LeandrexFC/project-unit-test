@@ -44,6 +44,4 @@ const productDetails = (firstProduct, secondProduct) => [
 
 productDetails();
 
-let results = Object.values(productDetails('Alcool gel', 'Máscara'))[0].details.productId.split('gel')[1]
-console.log(typeof Number(results));
 module.exports = productDetails;
